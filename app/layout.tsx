@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Neel Singh | MSCS @ Texas A&M",
   description:
-    "Neel Singh – MS in Computer Science at Texas A&M. AI/ML, Systems, Data Engineering. Portfolio and projects.",
+    "Neel Singh – MS in Computer Science at Texas A&M(2026). AI/ML, Systems, Data Engineering. Portfolio and projects.",
 };
 
 
