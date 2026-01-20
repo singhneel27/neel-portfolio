@@ -512,7 +512,7 @@ export default function Home() {
       <header style={styles.nav}>
         <div style={styles.navInner}>
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-            <strong style={{ letterSpacing: -0.2 }}>Neel</strong>
+            <strong style={{ letterSpacing: -0.2 }}>Neel Singh</strong>
             <span
               style={{
                 fontSize: 12,
