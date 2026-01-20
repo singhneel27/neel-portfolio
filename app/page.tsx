@@ -1,56 +1,62 @@
 export default function Home() {
   const projects = [
     {
-      title: "Healthcare Referral Analytics (GNN)",
-      subtitle: "Heterogeneous graphs • Link prediction • 4M+ records",
+      title: "Clinical Referral AI Assistant",
+      subtitle: "RAG • LangChain • FastAPI • FAISS • Docker",
       bullets: [
-        "Built heterogeneous graph pipelines and models for physician–specialist referral links.",
-        "Achieved ~0.88 AUC in link prediction experiments.",
-        "Focused on scalable feature engineering + reproducible evaluation.",
+        "Built an LLM-powered clinical decision support assistant for context-aware specialist referrals.",
+        "Implemented FAISS-based vector indexing for efficient retrieval over high-volume healthcare data.",
+        "Designed low-latency FastAPI backend services with robust logging, metrics, and error handling.",
+        "Containerized and deployed using Docker, reducing cold-start latency by 31%.",
       ],
       links: [
-        { label: "GitHub", href: "https://github.com/singhneel27" }, // replace with repo link if public
+        { label: "GitHub", href: "https://github.com/singhneel27" },
       ],
     },
     {
-      title: "Operating Systems Kernel Projects",
-      subtitle: "Paging • Scheduler • Non-blocking disk driver",
+      title: "Healthcare Referral Analytics Platform",
+      subtitle: "Graph ML • ETL • Large-scale data (4M+ records)",
       bullets: [
-        "Implemented core OS components (paging, scheduling) and performance-focused subsystems.",
-        "Worked with low-level debugging and systems interfaces (C/C++).",
-        "Built for correctness, isolation, and predictable performance.",
+        "Built and maintained scalable ETL pipelines processing 4M+ healthcare records.",
+        "Engineered graph-based data representations to support high-throughput analytics workloads.",
+        "Optimized data retrieval paths, reducing query latency and improving system reliability.",
+        "Added observability tooling (logging, metrics, debugging hooks) to improve developer visibility.",
       ],
       links: [
-        { label: "Write-up", href: "#" }, // replace if you have a write-up link
+        { label: "Research", href: "#" },
       ],
     },
     {
-      title: "Personalized AI Travel Advisor",
-      subtitle: "User memory • LLM orchestration • Itinerary generation",
+      title: "Autonomous Overtaking in CARLA",
+      subtitle: "Deep Reinforcement Learning • DDQN • Simulation",
       bullets: [
-        "Designed a preference + memory workflow to generate personalized itineraries.",
-        "Supports retrieval of prior preferences and user-confirmed memory updates.",
-        "Built as a modular web app with clear API boundaries.",
+        "Extended a lane-keeping autonomous driving model to support safe overtaking and lane changes.",
+        "Designed a custom reward function for DDQN, improving overtaking success by 17%.",
+        "Improved lane-change accuracy from 83% to 89% using real sensor data integration.",
       ],
       links: [
-        { label: "Demo", href: "#" }, // replace if you have a demo link
+        { label: "Project", href: "#" },
       ],
     },
   ];
 
   const skills = [
     "Python",
-    "C/C++",
-    "SQL",
-    "PyTorch",
-    "StatsModels",
+    "Java",
+    "C++",
+    "REST APIs",
     "FastAPI",
-    "React/Next.js",
-    "Git",
-    "Linux",
-    "Machine Learning",
+    "SQL / MySQL / MongoDB",
+    "ETL Pipelines",
     "Graph ML",
-    "Systems Programming",
+    "Machine Learning",
+    "Deep Reinforcement Learning",
+    "Distributed Systems",
+    "Linux",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "CI/CD (GitHub Actions)",
   ];
 
   const cardStyle: React.CSSProperties = {
@@ -66,10 +72,11 @@ export default function Home() {
   return (
     <main
       style={{
-        maxWidth: 980,
+        maxWidth: 1040,
         margin: "0 auto",
         padding: "56px 18px 80px",
-        fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+        fontFamily:
+          "system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
       }}
     >
       {/* HERO */}
@@ -77,22 +84,24 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            alignItems: "flex-start",
             justifyContent: "space-between",
+            alignItems: "flex-start",
             gap: 16,
             flexWrap: "wrap",
           }}
         >
-          <div style={{ minWidth: 280 }}>
-            <h1 style={{ fontSize: 44, margin: 0, letterSpacing: -0.5 }}>Neel Singh</h1>
-            <p style={{ ...muted, marginTop: 10, marginBottom: 0, lineHeight: 1.6, fontSize: 16 }}>
-              MS in Computer Science @ Texas A&amp;M University (May 2026)
+          <div>
+            <h1 style={{ fontSize: 44, margin: 0, letterSpacing: -0.5 }}>
+              Neel Vijay Pratap Singh
+            </h1>
+            <p style={{ ...muted, marginTop: 10, lineHeight: 1.6, fontSize: 16 }}>
+              M.S. Computer Science @ Texas A&amp;M University (May 2026)
               <br />
-              AI/ML • Systems • Data Engineering
+              Backend • Systems • Machine Learning
             </p>
           </div>
 
-          <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <div style={{ display: "flex", gap: 10 }}>
             <a
               href="/resume.pdf"
               target="_blank"
@@ -102,7 +111,6 @@ export default function Home() {
                 borderRadius: 12,
                 border: "1px solid #3a3a3a",
                 color: "white",
-                background: "rgba(255,255,255,0.03)",
               }}
             >
               Resume (PDF)
@@ -115,7 +123,6 @@ export default function Home() {
                 borderRadius: 12,
                 border: "1px solid #3a3a3a",
                 color: "white",
-                background: "rgba(255,255,255,0.03)",
               }}
             >
               Email
@@ -123,59 +130,45 @@ export default function Home() {
           </div>
         </div>
 
-        {/* mini about card */}
         <div style={{ ...cardStyle, marginTop: 18 }}>
           <p style={{ margin: 0, ...muted, lineHeight: 1.7 }}>
-            I build systems and ML solutions with an emphasis on reproducibility, scale, and clean
-            engineering. Recently: graph ML for healthcare referrals, OS kernel modules, and LLM
-            apps with memory.
+            Software engineer and computer science graduate student focused on
+            backend systems, scalable data pipelines, and applied machine learning.
+            Experienced in building production-grade services, graph-based analytics,
+            and ML-driven decision support systems.
           </p>
         </div>
       </section>
 
-      {/* GRID: Projects + Sidebar */}
+      {/* MAIN GRID */}
       <section
         style={{
           display: "grid",
-          gridTemplateColumns: "1.6fr 1fr",
+          gridTemplateColumns: "1.7fr 1fr",
           gap: 16,
         }}
       >
         {/* PROJECTS */}
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-          <h2 style={{ margin: "6px 0 4px", fontSize: 20, letterSpacing: -0.2 }}>Projects</h2>
+          <h2 style={{ fontSize: 20 }}>Projects</h2>
 
           {projects.map((p) => (
             <div key={p.title} style={cardStyle}>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-                <div>
-                  <div style={{ fontSize: 18, fontWeight: 650 }}>{p.title}</div>
-                  <div style={{ ...muted, marginTop: 6, fontSize: 14 }}>{p.subtitle}</div>
-                </div>
-
-                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  {p.links.map((l) => (
-                    <a
-                      key={l.label}
-                      href={l.href}
-                      target="_blank"
-                      style={{
-                        textDecoration: "none",
-                        fontSize: 13,
-                        padding: "7px 10px",
-                        borderRadius: 10,
-                        border: "1px solid #3a3a3a",
-                        color: "white",
-                        background: "rgba(255,255,255,0.02)",
-                      }}
-                    >
-                      {l.label}
-                    </a>
-                  ))}
+              <div>
+                <div style={{ fontSize: 18, fontWeight: 650 }}>{p.title}</div>
+                <div style={{ ...muted, marginTop: 6, fontSize: 14 }}>
+                  {p.subtitle}
                 </div>
               </div>
 
-              <ul style={{ marginTop: 14, marginBottom: 0, paddingLeft: 18, ...muted, lineHeight: 1.75 }}>
+              <ul
+                style={{
+                  marginTop: 14,
+                  paddingLeft: 18,
+                  ...muted,
+                  lineHeight: 1.75,
+                }}
+              >
                 {p.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
@@ -186,29 +179,46 @@ export default function Home() {
 
         {/* SIDEBAR */}
         <aside style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-          {/* LINKS */}
+          {/* EXPERIENCE */}
           <div style={cardStyle}>
-            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>Links</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <a style={{ color: "white" }} target="_blank" href="https://github.com/singhneel27">
-                GitHub
-              </a>
-              <a
-                style={{ color: "white" }}
-                target="_blank"
-                href="https://www.linkedin.com/in/neel-vijay-singh/"
-              >
-                LinkedIn
-              </a>
-              <a style={{ color: "white" }} href="mailto:neel27@tamu.edu">
-                neel27@tamu.edu
-              </a>
+            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>
+              Experience
+            </div>
+
+            <div style={{ marginBottom: 12 }}>
+              <div style={{ fontWeight: 650 }}>
+                Research Assistant — Texas A&amp;M University
+              </div>
+              <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
+                Built scalable ETL pipelines and graph-based analytics over 4M+
+                healthcare records.
+              </div>
+            </div>
+
+            <div style={{ marginBottom: 12 }}>
+              <div style={{ fontWeight: 650 }}>
+                Software Development Intern — Robotics Services
+              </div>
+              <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
+                Backend APIs, AWS optimization, caching, indexing, automation.
+              </div>
+            </div>
+
+            <div>
+              <div style={{ fontWeight: 650 }}>
+                Software Development Intern — Ardent Computech
+              </div>
+              <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
+                Async APIs, database optimization, DoS resilience, Agile delivery.
+              </div>
             </div>
           </div>
 
           {/* SKILLS */}
           <div style={cardStyle}>
-            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>Skills</div>
+            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>
+              Skills
+            </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {skills.map((s) => (
                 <span
@@ -218,7 +228,6 @@ export default function Home() {
                     padding: "7px 10px",
                     borderRadius: 999,
                     border: "1px solid #3a3a3a",
-                    background: "rgba(255,255,255,0.02)",
                     color: "rgba(255,255,255,0.9)",
                   }}
                 >
@@ -228,37 +237,22 @@ export default function Home() {
             </div>
           </div>
 
-          {/* EXPERIENCE */}
-          <div style={cardStyle}>
-            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>Experience</div>
-
-            <div style={{ marginBottom: 12 }}>
-              <div style={{ fontWeight: 650 }}>Research Assistant — Texas A&amp;M (Mays)</div>
-              <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
-                Healthcare analytics • Graph ML • Large-scale data
-              </div>
-            </div>
-
-            <div>
-              <div style={{ fontWeight: 650 }}>TA / Grader — Texas A&amp;M</div>
-              <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
-                Feedback-driven grading • Analytics coursework support
-              </div>
-            </div>
-          </div>
-
           {/* EDUCATION */}
           <div style={cardStyle}>
-            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>Education</div>
+            <div style={{ fontSize: 16, fontWeight: 650, marginBottom: 10 }}>
+              Education
+            </div>
             <div style={{ fontWeight: 650 }}>Texas A&amp;M University</div>
             <div style={{ ...muted, fontSize: 13, marginTop: 4 }}>
-              M.S. Computer Science — Expected May 2026
+              M.S. Computer Science — GPA 3.5
+            </div>
+            <div style={{ ...muted, fontSize: 13, marginTop: 6 }}>
+              B.Tech Computer Science — GPA 3.75
             </div>
           </div>
         </aside>
       </section>
 
-      {/* MOBILE RESPONSIVENESS NOTE */}
       <style>{`
         @media (max-width: 900px) {
           main section[style*="grid-template-columns"] {
@@ -268,7 +262,7 @@ export default function Home() {
       `}</style>
 
       <footer style={{ marginTop: 28, ...muted, fontSize: 13 }}>
-        © {new Date().getFullYear()} Neel Singh • Built with Next.js • Hosted on Vercel
+        © {new Date().getFullYear()} Neel Vijay Pratap Singh • Next.js • Vercel
       </footer>
     </main>
   );
