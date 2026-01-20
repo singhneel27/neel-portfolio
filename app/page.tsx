@@ -4,7 +4,7 @@ export default function Home() {
       <h1 style={{ fontSize: 40, marginBottom: 8 }}>Neel Singh</h1>
 
       <p style={{ fontSize: 18, marginBottom: 24 }}>
-        MS in Computer Science @ Texas A&amp;M University Hello
+        MS in Computer Science @ Texas A&amp;M University
         <br />
         AI/ML • Systems • Data Engineering
       </p>
